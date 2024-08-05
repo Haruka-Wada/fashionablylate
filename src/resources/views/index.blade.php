@@ -16,8 +16,8 @@ Contact
                 <label for="name">お名前<span>※</span></label>
             </dt>
             <dd class="contact__form-input">
-                <input type="text" id="name" value="例:山田" name="first_name">
-                <input type="text" value="例:太郎" name="last_name">
+                <input type="text" id="name" placeholder="例:山田" name="first_name">
+                <input type="text" placeholder="例:太郎" name="last_name">
             </dd>
             <dt class="contact__form-item">
                 性別<span>※</span>
@@ -31,29 +31,29 @@ Contact
                 <label for="email">メールアドレス<span>※</span></label>
             </dt>
             <dd class="contact__form-input">
-                <input type="text" id="email" value="例:test@example.com" name="email">
+                <input type="text" id="email" placeholder="例:test@example.com" name="email">
             </dd>
             <dt class="contact__form-item">
                 <label for="tell">電話番号<span>※</span></label>
             </dt>
             <dd class="contact__form-input">
-                <input type="text" id="tell" value="080" name="tell1">
+                <input type="text" id="tell" placeholder="080" name="tell1">
                 -
-                <input type="text" value="1234" name="tell2">
+                <input type="text" placeholder="1234" name="tell2">
                 -
-                <input type="text" value="5678" name="tell3">
+                <input type="text" placeholder="5678" name="tell3">
             </dd>
             <dt class="contact__form-item">
                 <label for="address">住所<span>※</span></label>
             </dt>
             <dd class="contact__form-input">
-                <input type="text" id="address" value="例:東京都渋谷区千駄ヶ谷1-2-3" name="address">
+                <input type="text" id="address" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3" name="address">
             </dd>
             <dt class="contact__form-item">
                 <label for="building">建物名</label>
             </dt>
             <dd class="contact__form-input">
-                <input type="text" id="building" value="例:千駄ヶ谷マンション101" name="building">
+                <input type="text" id="building" placeholder="例:千駄ヶ谷マンション101" name="building">
             </dd>
             <dt class="contact__form-item">
                 <label for="category">お問い合わせの種類<span>※</span></label>
@@ -70,7 +70,7 @@ Contact
                 <label for="detail">お問い合わせ内容</label>
             </dt>
             <dd class="contact__form-input">
-                <input type="textarea" id="detail" value="お問い合わせ内容をご記載ください" name="detail">
+                <input type="textarea" id="detail" placeholder="お問い合わせ内容をご記載ください" name="detail">
             </dd>
         </dl>
         <button>確認画面</button>
