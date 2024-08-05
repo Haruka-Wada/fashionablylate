@@ -1,0 +1,33 @@
+body {
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*--------------------------
+header
+---------------------------*/
+.header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #E0DFDE;
+}
+
+.header-title {
+    font-size: 40px;
+}
+
+/*--------------------------
+main
+---------------------------*/
+.section-title {
+    text-align: center;
+    font-size: 35px;
+    margin: 50px 0;
+}
+
+.section-container {
+    width: 100%;
+}
