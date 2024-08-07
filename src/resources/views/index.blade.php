@@ -60,10 +60,10 @@ Contact
                 <label for="category">お問い合わせの種類<span>※</span></label>
             </dt>
             <dd class="contact__form-input">
-                <select name="category" id="category">
+                <select name="category_id" id="category">
                     <option value="" selected disabled>選択してください</option>
                     @foreach($categories as $category)
-                    <option value="{{ $category['content'] }}">{{ $category['content'] }}</option>
+                    <option value="{{ $category['id'] }}">{{ $category['content'] }}</option>
                     @endforeach
                 </select>
             </dd>
