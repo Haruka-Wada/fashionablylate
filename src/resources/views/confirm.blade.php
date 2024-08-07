@@ -20,15 +20,15 @@ Confirm
             <tr>
                 <th>性別</th>
                 <td>
-                    @if($contact['gender'] = "男性")
+                    @if($contact['gender'] = "1")
                     <p>男性</p>
                     <input type="hidden" name="gender" value="1">
-                    @elseif($contact['gender'] = "女性")
+                    @elseif($contact['gender'] = "2")
                     <p>女性</p>
                     <input type="hidden" name="gender" value="2">
                     @else
                     <p>その他</p>
-                    <input type="hidden" name="gender" value="その他">
+                    <input type="hidden" name="gender" value="3">
                     @endif
                 </td>
             </tr>
@@ -43,6 +43,9 @@ Confirm
                 <th>電話番号</th>
                 <td>
                     <p>{{ $contact['tell1'] }}{{ $contact['tell2'] }}{{ $contact['tell3'] }}</p>
+                    <input type="hidden" name="tell1" value="{{ $contact['tell1'] }}">
+                    <input type="hidden" name="tell2" value="{{ $contact['tell2'] }}">
+                    <input type="hidden" name="tell3" value="{{ $contact['tell3'] }}">
                     <input type="hidden" name="tell" value="{{ $contact['tell1'] }}{{ $contact['tell2'] }}{{ $contact['tell3'] }}">
                 </td>
             </tr>
