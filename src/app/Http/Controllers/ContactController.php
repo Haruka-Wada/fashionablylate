@@ -36,5 +36,5 @@ class ContactController extends Controller
         return view('/thanks');
     }
 
-    
+    public function login()
 }
