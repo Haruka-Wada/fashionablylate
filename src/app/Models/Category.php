@@ -16,4 +16,8 @@ class Category extends Model
     protected $guarded = [
         'id'
     ];
+
+    public function getContent() {
+        return $this->content;
+    }
 }
