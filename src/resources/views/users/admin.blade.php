@@ -37,6 +37,7 @@ Admin
 
 <div class="option">
     <button>エクスポート</button>
+    {{ $contacts->links() }}
 </div>
 <div class="container">
     <table class="table">
