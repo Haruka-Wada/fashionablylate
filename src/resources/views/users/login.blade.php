@@ -17,12 +17,18 @@ login
         <dl class="login-form">
             <dt>
                 <label for="email">メールアドレス</label>
+                @error('email')
+                {{ $message }}
+                @enderror
             </dt>
             <dd>
-                <input type="text" id="email" name="email" value="{{ old('email') }}">
+                <input type="email" id="email" name="email" value="{{ old('email') }}">
             </dd>
             <dt>
                 <label for="password">パスワード</label>
+                @error('password')
+                {{ $message }}
+                @enderror
             </dt>
             <dd>
                 <input type="text" id="password" name="password">

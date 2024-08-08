@@ -45,7 +45,7 @@ Contact
                 @enderror
             </dt>
             <dd class="contact__form-input">
-                <input type="text" id="email" placeholder='例:test@example.com' name="email" value="{{ old('email') }}">
+                <input type="email" id="email" placeholder='例:test@example.com' name="email" value="{{ old('email') }}">
             </dd>
             <dt class="contact__form-item">
                 <label for="tell">電話番号<span>※</span></label>

@@ -12,26 +12,36 @@ register
 
 @section('section-contents')
 <div class="section-contents">
-    <form action="/login" method="post">
+    <form action="/register" method="post">
         @csrf
         <dl class="register-form">
             <dt>
                 <label for="name">お名前</label>
+                @error('name')
+                {{ $message }}
+                @enderror
             </dt>
             <dd>
-                <input type="text" id="name" value="{{ old('name') }}">
+                <input type="text" id="name"
+                name="name" value="{{ old('name') }}">
             </dd>
             <dt>
                 <label for="email">メールアドレス</label>
+                @error('email')
+                {{ $message }}
+                @enderror
             </dt>
             <dd>
-                <input type="text" id="email" value="{{ old('email') }}">
+                <input type="email" id="email" name="email" value="{{ old('email') }}">
             </dd>
             <dt>
                 <label for="password">パスワード</label>
+                @error('password')
+                {{ $message }}
+                @enderror
             </dt>
             <dd>
-                <input type="text" id="password">
+                <input type="text" id="password" name="password">
             </dd>
         </dl>
         <button>登録</button>
