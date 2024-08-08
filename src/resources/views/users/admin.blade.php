@@ -1,5 +1,9 @@
 @extends('layouts.default')
 
+@section('livewire')
+@livewireStyles
+@endsection
+
 @section('section-title')
 Admin
 @endsection
@@ -24,7 +28,13 @@ Admin
                 {{ $contact['first_name'] }} {{ $contact['last_name'] }}
             </th>
             <th>
-                @if($contact['gender'] === 1)男性@elseif($contact['gender'] === 2)女性 @else($contact['gender'] === 3)その他@endif
+                @if($contact['gender'] === 1)
+                男性
+                @elseif($contact['gender'] === 2)
+                女性
+                @else($contact['gender'] === 3)
+                その他
+                @endif
             </th>
             <th>
                 {{ $contact['email']}}
@@ -33,10 +43,14 @@ Admin
                 {{ $contact['category']['content'] }}
             </th>
             <th>
-                <button></button>
+                @livewire('modal', ['contact' => $contact])
             </th>
         </tr>
         @endforeach
     </table>
 </div>
+@endsection
+
+@section('livewireScripts')
+@livewireScripts
 @endsection

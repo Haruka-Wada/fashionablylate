@@ -1,0 +1,54 @@
+<div>
+    <button wire:click="openModal()" type="button">詳細</button>
+
+    @if($showModal)
+    <button wire:click="closeModal()" type="" button>×</button>
+    <table class="confirm-form">
+        <tr>
+            <th>お名前</th>
+            <td>
+                <p></p>
+            </td>
+        </tr>
+        <tr>
+            <th>性別</th>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <th>メールアドレス</th>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <th>電話番号</th>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <th>住所</th>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <th>建物名</th>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <th>お問い合わせの種類</th>
+            <td>
+                <p>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th>お問い合わせ内容</th>
+            <td>
+            </td>
+        </tr>
+    </table>
+    <button>削除</button>
+    </form>
+    @endif
+</div>
