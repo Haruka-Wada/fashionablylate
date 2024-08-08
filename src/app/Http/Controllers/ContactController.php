@@ -9,12 +9,14 @@ use App\Http\Requests\ContactRequest;
 
 class ContactController extends Controller
 {
+    //お問い合わせフォームの入力画面表示
     public function index() {
         $contacts = Contact::with('category')->get();
         $categories = Category::all();
         return view('index', compact('contacts','categories'));
     }
 
+    //お問い合わせフォームの確認画面表示
     public function confirm(ContactRequest $request) {
         $categories = Category::all();
         $category = Category::find($request->category_id);
@@ -22,6 +24,7 @@ class ContactController extends Controller
         return view('confirm', compact('contact', 'category'));
     }
 
+    //お問い合わせの登録、修正ボタンが押された場合の処理
     public function store(Request $request) {
         $contact = $request->only(['first_name', 'last_name', 'gender', 'email', 'tell', 'address', 'building', 'category_id', 'detail']);
 
@@ -36,11 +39,23 @@ class ContactController extends Controller
         return view('/thanks');
     }
 
+    //userのログイン画面表示
     public function login() {
         return view('users.login');
     }
 
+    //userがログインできた場合のデータ画面表示
     public function admin() {
-        return view('users.admin');
+        $contacts = Contact::with('category')->get()->paginate(7);
+        $categories = Category::all();
+        return view('users.admin', compact('contacts','categories'));
+    }
+
+    //Adminの検索機能
+    //キーワード検索
+    public function search (Request $request) {
+        $contacts = Contact::with('category')->GenderSearch($request->gender)->CategorySearch($request->category)->KeywordSearch($request->keyword)->DateSearch($request->date)->get();
+        $categories = Category::all();
+        return view('users.admin', compact('contacts', 'categories'));
     }
 }
