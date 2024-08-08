@@ -18,3 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [ContactController::class, 'index']);
 Route::post('/confirm', [ContactController::class, 'confirm']);
 Route::post('/thanks', [ContactController::class, 'store']);
+
+//loginにアクセスされた場合、ユーザー情報が登録されてたらlogin画面に移動
+Route::middleware('auth')->group(function() {
+    Route::get('/admin', [ContactController::class, 'admin']);
+});
