@@ -33,7 +33,7 @@ Contact
                 @enderror
             </dt>
             <dd class="contact__form-input">
-                <input type="radio" id="man" name="gender" value="1" {{ old('gender') === 1 ? 'checked' : '' }}>
+                <input type="radio" id="man" name="gender" value="1" >
                 <label for="man">男性</label>
                 <label><input type="radio" name="gender" value='2'>女性</label>
                 <label><input type="radio" name="gender" value='3'>その他</label>
