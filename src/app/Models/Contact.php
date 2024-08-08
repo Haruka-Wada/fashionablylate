@@ -28,4 +28,30 @@ class Contact extends Model
     public function category() {
         return $this->belongsTo('App\Models\Category');
     }
+
+    public function scopeKeywordSearch ($query, $keyword) {
+        if(!empty($keyword)) {
+            $query->where('first_name', 'like', '%' . $keyword . '%')
+            ->orWhere('last_name', 'like', '%' . $keyword . '%')
+            ->orWhere('email', 'like', '%' . $keyword . '%')->get();
+        }
+    }
+
+    public function scopeGenderSearch ($query, $gender) {
+        if(!empty($gender)) {
+            $query->where('gender', $gender);
+        }
+    }
+
+    public function scopeCategorySearch ($query, $category) {
+        if(!empty($category)) {
+            $query->where('category_id', $category);
+        }
+    }
+
+    public function scopeDateSearch ($query, $date) {
+        if(!empty($date)) {
+            $query->where('created_at', 'like', $date . '%');
+        }
+    }
 }

@@ -46,7 +46,16 @@ class ContactController extends Controller
 
     //userがログインできた場合のデータ画面表示
     public function admin() {
-        $contacts = Contact::with('category')->get();
-        return view('users.admin', compact('contacts'));
+        $contacts = Contact::with('category')->get()->paginate(7);
+        $categories = Category::all();
+        return view('users.admin', compact('contacts','categories'));
+    }
+
+    //Adminの検索機能
+    //キーワード検索
+    public function search (Request $request) {
+        $contacts = Contact::with('category')->GenderSearch($request->gender)->CategorySearch($request->category)->KeywordSearch($request->keyword)->DateSearch($request->date)->get();
+        $categories = Category::all();
+        return view('users.admin', compact('contacts', 'categories'));
     }
 }
