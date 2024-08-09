@@ -46,8 +46,9 @@ class ContactController extends Controller
 
     //userがログインできた場合のデータ画面表示
     public function admin() {
-        $contacts = Contact::with('category')->get()->paginate(7);
+        $contacts = Contact::with('category')->get();
         $categories = Category::all();
+        $contacts = Contact::Paginate(7);
         return view('users.admin', compact('contacts','categories'));
     }
 

@@ -16,6 +16,7 @@
 
 <body>
     <header class="header">
+        <div class="header1"></div>
         <p class="header-title">FashionablyLate</p>
         @yield('header-button')
     </header>
@@ -28,7 +29,7 @@
             </div>
         </div>
     </main>
-@yield('livewireScripts')
+    @yield('livewireScripts')
 </body>
 
 </html>
