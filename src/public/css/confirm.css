@@ -1,0 +1,78 @@
+html {
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #8B7969;;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 35px;
+    margin: 50px 0;
+}
+
+.section-contents {
+    width: 65%;
+    margin: 0 auto;
+}
+
+.confirm-form {
+    width: 100%;
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #8B7969;
+    font-size: 20px;
+    border: solid 2px #E0DFDE;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+/*-- 項目　--*/
+.confirm-form th {
+    width: 40%;
+    height: 70px;
+    font-size: 20px;
+    background-color: #BAA899;
+    color: #fff;
+    font-weight: normal;
+    vertical-align: middle;
+    padding-left: 40px;
+    border: solid 1px #E0DFDE;
+}
+
+/*-- フォーム　--*/
+.confirm-form td {
+    width: 60%;
+    height: 70px;
+    vertical-align: middle;
+    padding-left: 40px;
+    border: solid 1px #E0DFDE;
+}
+
+/*-- ボタン　--*/
+.button {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+.submit-button {
+    background-color: #82756A;
+    color: #fff;
+    width: 120px;
+    height: 42px;
+    border: none;
+    position: relative;
+    left: 60px;
+}
+.edit-button {
+    background: transparent;
+    color: #82756A;
+    width: 120px;
+    height: 42px;
+    border: none;
+    text-decoration: underline;
+    position: relative;
+    left: 60px;
+}
+

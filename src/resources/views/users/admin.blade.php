@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('css')
-<link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="{{ asset('/css/admin.css') }}">
 @endsection
 
 @section('livewire')
@@ -9,51 +9,55 @@
 @endsection
 
 @section('section-title')
-Admin
+<div class="section-title">
+    <p>Admin</p>
+</div>
 @endsection
 
 @section('section-contents')
 <div class="search">
-    <form action="/search" method="get">
+    <form action="/search" method="get" name="search-form">
         @csrf
-        <input type="text" name="keyword" value="{{ old('keyword') }}">
-        <select name="gender">
+        <input type="text" class="search-input-keyword" name="keyword" value="{{ old('keyword') }}" placeholder="名前やメールアドレスを入力してください">
+        <select name="gender" class="search-input">
             <option value="" selected disabled>性別</option>
             <option value="1">男性</option>
             <option value="2">女性</option>
             <option value="3">その他</option>
         </select>
-        <select name='category'>
+        <select name='category' class="search-input-category">
             <option value="" selected disabled>お問い合わせの種類</option>
             @foreach($categories as $category)
             <option value="{{ $category['id'] }}">{{ $category['content'] }}</option>
             @endforeach
         </select>
-        <input type="date" name="date" pattern="\d{4}-\d{2}-\d{2}">
-        <button>検索</button>
+        <input type="date" name="date" class="search-input-date" pattern="\d{4}-\d{2}-\d{2}">
+        <button class="search-button">検索</button>
     </form>
-    <button onclick="location.href='./admin'">リセット</button>
+    <button class="reset-button" onclick="location.href='./admin'">リセット</button>
 </div>
 
 <div class="option">
-    <button>エクスポート</button>
-    {{ $contacts->links() }}
+    <button class="export-button">エクスポート</button>
+    <div class="pagination">
+        {{ $contacts->links() }}
+    </div>
 </div>
 <div class="container">
     <table class="table">
-        <tr>
-            <th>お名前</th>
-            <th>性別</th>
-            <th>メールアドレス</th>
-            <th>お問い合わせの種類</th>
+        <tr class="table-heading">
+            <th class="name">お名前</th>
+            <th class="gender">性別</th>
+            <th class="email">メールアドレス</th>
+            <th class="category">お問い合わせの種類</th>
             <th></th>
         </tr>
         @foreach($contacts as $contact)
-        <tr>
-            <th>
+        <tr class="table-item">
+            <th class="name">
                 {{ $contact['first_name'] }} {{ $contact['last_name'] }}
             </th>
-            <th>
+            <th class="gender">
                 @if($contact['gender'] === 1)
                 男性
                 @elseif($contact['gender'] === 2)
@@ -62,13 +66,13 @@ Admin
                 その他
                 @endif
             </th>
-            <th>
+            <th class="email">
                 {{ $contact['email']}}
             </th>
-            <th>
+            <th class="category">
                 {{ $contact['category']['content'] }}
             </th>
-            <th>
+            <th class="table-item-detail">
                 @livewire('modal', ['contact' => $contact])
             </th>
         </tr>

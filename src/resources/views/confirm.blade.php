@@ -1,7 +1,12 @@
 @extends('layouts.default')
 
+@section('css')
+<link rel="stylesheet" href="{{ asset('css/confirm.css') }}">
+
 @section('section-title')
-Confirm
+<div class="section-title">
+    <p>Contact</p>
+</div>
 @endsection
 
 @section('section-contents')
@@ -80,8 +85,10 @@ Confirm
                 </td>
             </tr>
         </table>
-        <button type="submit" name="submit" value="complete" class="submit-button">送信</button>
-        <button type="submit" name="back" value="back" class="edit-button">修正</button>
+        <div class="button">
+            <button type="submit" name="submit" value="complete" class="submit-button">送信</button>
+            <button type="submit" name="back" value="back" class="edit-button">修正</button>
+        </div>
     </form>
 </div>
 

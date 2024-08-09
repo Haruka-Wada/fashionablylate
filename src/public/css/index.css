@@ -4,7 +4,146 @@ html {
     font-style: normal;
 }
 
+.section-title {
+    text-align: center;
+    font-size: 35px;
+    margin: 50px 0;
+}
+
 .section-contents {
     width: 65%;
     margin: 0 auto;
+}
+
+.contact__form-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    color: #8B7969;
+}
+/*-- 項目　--*/
+.contact__form-item {
+    width: 40%;
+    height: 38px;
+    margin: 10px 0;
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.label {
+    width: 100%;
+}
+.error {
+    width: 100%;
+    color: red;
+    font-size: 14px;
+}
+span {
+    color: red;
+}
+
+/*-- インプットフォーム　--*/
+.contact__form-input {
+    width: 60%;
+}
+input {
+    background-color: #F4F4F4;
+    height: 38px;
+    border: none;
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+}
+input::placeholder {
+    font-size: 14px;
+    padding: 10px;
+    color: #8B7969;
+}
+
+/*-- お名前 --*/
+.contact__form-input-name {
+    display: flex;
+    justify-content: space-between;
+}
+.contact__form-input-name input{
+    width: 45%;
+}
+
+/*-- 性別 --*/
+.gender-label{
+    margin-right: 40px;
+    font-size: 18px;
+}
+.contact__form-input-gender {
+    accent-color: #8B7969;
+    inline-size: 20px;
+    block-size: 20px;
+    top: -4px;
+    position: relative;
+}
+
+/*-- メールアドレス --*/
+.contact__form-input-email {
+    width: 100%;
+}
+
+/*-- 電話番号　--*/
+.contact__form-input-tell {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact__form-input-tell input {
+    text-align: center;
+    width: 30%;
+}
+
+/*-- 住所 --*/
+.contact__form-input-address {
+    width: 100%;
+}
+
+/*-- 建物名　--*/
+.contact__form-input-building {
+    width: 100%;
+}
+
+/*-- お問い合わせの種類 --*/
+.contact__form-input-category {
+    width: 50%;
+    background-color: #F4F4F4;
+    height: 38px;
+    border: none;
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: #8B7969;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+/*--　お問い合わせ内容　--*/
+.contact__form-input-detail {
+    width: 100%;
+    height: 130px;
+}
+
+/*-- ボタン　--*/
+.button {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+button {
+    width: 160px;
+    height: 46px;
+    background-color: #82756A;
+    color: #fff;
+    border: none;
+    font-size: 20px;
 }
