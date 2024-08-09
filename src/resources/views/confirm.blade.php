@@ -4,7 +4,9 @@
 <link rel="stylesheet" href="{{ asset('css/confirm.css') }}">
 
 @section('section-title')
-Confirm
+<div class="section-title">
+    <p>Contact</p>
+</div>
 @endsection
 
 @section('section-contents')

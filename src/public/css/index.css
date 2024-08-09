@@ -4,6 +4,12 @@ html {
     font-style: normal;
 }
 
+.section-title {
+    text-align: center;
+    font-size: 35px;
+    margin: 50px 0;
+}
+
 .section-contents {
     width: 65%;
     margin: 0 auto;

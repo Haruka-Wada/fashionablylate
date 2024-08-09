@@ -22,9 +22,7 @@
 
     <main class="main">
         <div class="section">
-            <div class="section-title">
-                <p>@yield('section-title')</p>
-            </div>
+            @yield('section-title')
             <div class="section-container">
                 @yield('section-contents')
             </div>

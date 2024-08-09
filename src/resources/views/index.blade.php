@@ -5,7 +5,9 @@
 @endsection
 
 @section('section-title')
-Contact
+<div class="section-title">
+    <p>Contact</p>
+</div>
 @endsection
 
 @section('section-contents')

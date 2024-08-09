@@ -5,6 +5,12 @@ html {
     color: #8B7969;;
 }
 
+.section-title {
+    text-align: center;
+    font-size: 35px;
+    margin: 50px 0;
+}
+
 .section-contents {
     width: 65%;
     margin: 0 auto;
@@ -17,7 +23,8 @@ html {
     font-style: normal;
     color: #8B7969;
     font-size: 20px;
-    border: 1px solid #E0DFDE;
+    border: solid 2px #E0DFDE;
+    border-collapse: collapse;
     text-align: left;
 }
 
@@ -31,6 +38,7 @@ html {
     font-weight: normal;
     vertical-align: middle;
     padding-left: 40px;
+    border: solid 1px #E0DFDE;
 }
 
 /*-- フォーム　--*/
@@ -39,6 +47,7 @@ html {
     height: 70px;
     vertical-align: middle;
     padding-left: 40px;
+    border: solid 1px #E0DFDE;
 }
 
 /*-- ボタン　--*/
