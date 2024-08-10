@@ -40,7 +40,6 @@
 <div class="option">
     <button class="export-button">エクスポート</button>
     <div class="pagination">
-        {{ $contacts->links() }}
     </div>
 </div>
 <div class="container">
